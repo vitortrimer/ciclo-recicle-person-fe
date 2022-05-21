@@ -1,18 +1,26 @@
 import { Input, Button, InputGroup } from '@chakra-ui/react'
 import { useState } from 'react'
+import UserService from '../../services/User'
 
 const Login = () => {
-
+  const service = new UserService()
   const [formData, setFormData] = useState({
-    username: "",
+    document: "",
     password: ""
   })
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     e.stopPropagation()
-    console.log("submit works")
-    console.log("form data", formData)
+
+    service.login(formData).then((response) => {
+      if(response.data) {
+        const data = response.data
+        localStorage.setItem("user-token", data.token)
+        localStorage.setItem("user-name", data.name)
+        window.location.assign("/")
+      }
+    })
   }
 
   const handleInput = (e) => {
