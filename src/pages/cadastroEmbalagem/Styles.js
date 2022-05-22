@@ -12,11 +12,6 @@ export const cadastroEmbalagemContainer =  styled.div`
         width: 45vw;
         object-fit: cover;
     }
-    /* img{
-         align-items: center;
-         margin-top: 25px;
-         margin-left: 15px;
-    } */
 `;
 
 export const cadastroEmbalagemTitle = styled.p `
@@ -58,10 +53,12 @@ export const fundoBrancoTipo = styled.div `
    color: ${props => props.color || "#000"};
 `
 export const fundoBrancoInstrucoes = styled.div `
+    display: flex;
     margin-top: 14px;
     width: 80vw;
     padding: 8px 16px;
     background-color: #FFFFFF;
+    
 `
 export const pontuacaonButton = styled.button`
     margin-top: 19px;

@@ -73,7 +73,6 @@ const CadastroEmbalagem = () => {
                 </S.InstructionItem>
              ))
              }
-
          </S.fundoBrancoInstrucoes>
          <S.pontuacaonButton onClick={() => {setIsShowingModal(true)}} colorScheme='teal' size='md'>
         PONTUAÇÃO
