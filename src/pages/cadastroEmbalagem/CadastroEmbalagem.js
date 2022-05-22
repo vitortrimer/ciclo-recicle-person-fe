@@ -8,7 +8,7 @@ const CadastroEmbalagem = () => {
         "instrucao 1",
         "instrucao 2",
         "instrucao 3",
-        "instrucao 4"
+        "instrucao 4",
     ]
 
     return(
@@ -31,7 +31,6 @@ const CadastroEmbalagem = () => {
                 </div>
              ))
              }
-
          </S.fundoBrancoInstrucoes>
          <S.pontuacaonButton type="submit" colorScheme='teal' size='md'>
         PONTUAÇÃO

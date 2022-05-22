@@ -13,6 +13,7 @@ export const cadastroEmbalagemContainer =  styled.div`
         object-fit: cover;
     }
     img{
+        display: flex;
          align-items: center;
          margin-top: 25px;
          margin-left: 15px;
@@ -58,10 +59,12 @@ export const fundoBrancoTipo = styled.div `
    color: #FFCB47;
 `
 export const fundoBrancoInstrucoes = styled.div `
+    display: flex;
     margin-top: 14px;
     width: 80vw;
     padding: 8px 16px;
     background-color: #FFFFFF;
+    
 `
 export const pontuacaonButton = styled.button`
     margin-top: 19px;
@@ -75,8 +78,4 @@ export const pontuacaonButton = styled.button`
     line-height: 21px;
     font-size: 14px;
     font-style: normal;
-`
-export const instruction = styled.div `
-margin-left: center;
-
 `
