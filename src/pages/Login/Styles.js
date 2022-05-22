@@ -14,19 +14,6 @@ export const loginContainer =  styled.div`
         object-fit: cover;
     }
 `;
-export const loginUserContainer =  styled.div`
-`;
-
-
-export const loginPassContainer =  styled.div`
-    display: flex;
-    align-items: center;
-    width: 272.16px;
-    height: 36.48px;
-    margin-left: 10.37px;
-    background: #C4C4C4;
-    border-radius: 12px;
-`;
 
 export const Input = styled.input`
     width: 75vw;
@@ -66,6 +53,17 @@ export const insiraPass = styled.p`
 `
 
 export const loginButton= styled.button`
+    margin-top: 19px;
+    width: 75vw;
+    padding: 8px 0;
+    background-color: #338152;
+    box-shadow: 0px 4px 10px rgba(233, 68, 75, 0.25);
+    border-radius: 12px;
+    font-family: 'Poppins' !important;
+    color: #fff;
+    font-weight: 500;
+`
+export const cadastrarButton= styled.button`
     margin-top: 19px;
     width: 75vw;
     padding: 8px 0;
