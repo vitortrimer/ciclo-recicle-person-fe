@@ -53,7 +53,6 @@ export const fundoBrancoTipo = styled.div `
    color: ${props => props.color || "#000"};
 `
 export const fundoBrancoInstrucoes = styled.div `
-    display: flex;
     margin-top: 14px;
     width: 80vw;
     padding: 8px 16px;

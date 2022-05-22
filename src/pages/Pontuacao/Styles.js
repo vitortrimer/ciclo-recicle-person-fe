@@ -3,15 +3,9 @@ import styled from "styled-components";
 export const pontuacaoContainer =  styled.div`
     display: flex;
     min-height: 100vh;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
     background-color : #F8F8F8;
-
-
-    img{
-         margin-left: 15px;
-    }
 `;
 export const vejaSuaPontuacao = styled.p `
     margin-top: 25px;
@@ -34,6 +28,10 @@ export const contagemEstrela = styled.div`
     font-weight: 700;
     color: #202020;
 
+    span {
+        margin-left: 24px;
+    }
+
     
 `
 export const cuponsDisponiveis = styled.p`
@@ -49,33 +47,63 @@ export const cuponsDisponiveis = styled.p`
 `
 export const fundoBrancoPontuacoes = styled.div `
     display: flex;
+    flex-direction: column;
     margin-top: 14px;
     width: 80vw;
     padding: 8px 16px;
-    background-color: #FFFFFF;
     
 `
+
+
+
 export const PontuationsItem = styled.div`
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+
+    background: #fff;
 
     margin-top: 14px;
-    padding-left: 8px;
-    :not(:last-child) {
-    }
+    padding: 12px;
+    border-radius: 20px;
 
     :last-child {
         margin-bottom: 14px;
     }
 
     span {
-        margin-left: 20px;
-        color: #338152;
-        font-family: 'Montserrat', sans-serif !important;
+        color: #0D0D0D;
+        font-family: 'Poppins', sans-serif !important;
+        font-weight: 600;
     }
      
-    img{
-         margin-top: 25px;
-    }
     
+`
+
+export const MainContent = styled.div`
+    display: flex;
+    align-items: center;
+    span {
+        margin-left: 9px;
+    }
+`
+
+export const Infos = styled.div`
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+`
+
+export const Type = styled.div`
+    background: rgba(18, 170, 115, 0.18);
+    border-radius: 30px;
+    padding: 4px 8px;
+`
+
+export const Due = styled.div`
+    text-align: end;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
 `
