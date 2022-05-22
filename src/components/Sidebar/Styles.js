@@ -49,14 +49,13 @@ export const SearchIcon = styled.div`
 export const Icon = styled.div`
   height: 40px;
   width: 40px;
-  background-color: #F2F4F6;
   display: flex;
   align-items: center;
   justify-content: center;
 
   border-radius: 50%;
 
-  background-color: ${(props) => props.active ? 'rgb(34, 34, 34, 0.2)' : 'transparent'};
+  background-color: ${(props) => props.active ? 'rgb(34, 34, 34, 0.2)' : '#F2F4F6'};
 
   img {
     width: 16px;

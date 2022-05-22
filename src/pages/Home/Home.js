@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react'
 import Sidebar from '../../components/Sidebar'
 import benefitImage from '../../assets/big-check-mark 4.png'
 import smallLogo from '../../assets/Logo pequena 1.png'

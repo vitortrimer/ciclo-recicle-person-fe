@@ -1,13 +1,15 @@
-import { Input, Button, InputGroup } from '@chakra-ui/react'
 import { useState } from 'react'
 import UserService from '../../services/User'
+import * as S from './Styles'
+import imagemLogo from '../../icon/imagemLogoPequena.png'
 
 const Register = () => {
   const service = new UserService()
   const [formData, setFormData] = useState({
     name: "",
     document: "",
-    password: ""
+    password: "",
+    email: ""
   })
 
   const handleSubmit = (e) => {
@@ -37,30 +39,58 @@ const Register = () => {
 
   return(
     <form onSubmit={handleSubmit}>
-      <Input
+      <S.cadastroContainer>
+      <img src={imagemLogo}/>
+      <S.cadastroTitle>
+        CADASTRAR!  
+      </S.cadastroTitle>
+      <S.insiraAlgusDados>
+        Por favor, insira alguns dados.
+      </S.insiraAlgusDados> 
+      <S.insiraUserName>
+        Nome
+      </S.insiraUserName>       
+      <S.Input
         type="text"
         value={formData.name}
         onChange={handleInput}
         name="name"
-        placeholder='Nome da empresa'
+        placeholder='Nome Completo'
       />
-      <Input
+      <S.insiraUserCpf>
+        CPF
+      </S.insiraUserCpf>   
+      <S.Input
         type="text"
         value={formData.document}
         onChange={handleInput}
         name="document"
-        placeholder='CNPJ'
+        placeholder='CPF'
       />
-      <Input
+      <S.insiraUserEmail>
+        Email
+      </S.insiraUserEmail>       
+        <S.Input
+        type="text"
+        value={formData.document}
+        onChange={handleInput}
+        name="email"
+        placeholder='Email'
+      />
+      <S.insiraUserPassword>
+        Senha
+      </S.insiraUserPassword> 
+      <S.Input
         value={formData.password}
         onChange={handleInput}
         type="password"
         name="password"
-        placeholder='Password'
+        placeholder='**********'
       />
-      <Button type="submit" colorScheme='teal' size='md' onClick={handleSubmit}>
+      <S.cadastraButton type="submit" colorScheme='teal' size='md' onClick={handleSubmit}>
         Cadastrar
-      </Button>
+      </S.cadastraButton>
+      </S.cadastroContainer>
     </form>
   )
 }

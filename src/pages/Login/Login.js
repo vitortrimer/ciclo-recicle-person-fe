@@ -1,6 +1,10 @@
-import { Input, Button, InputGroup } from '@chakra-ui/react'
+/* eslint-disable jsx-a11y/alt-text */
 import { useState } from 'react'
 import UserService from '../../services/User'
+import * as S from './Styles'
+import imagemLogo from '../../icon/imagemLogoPequena.png'
+
+
 
 const Login = () => {
   const service = new UserService()
@@ -35,24 +39,42 @@ const Login = () => {
   }
 
   return(
+  
     <form onSubmit={handleSubmit}>
-      <Input
+     
+      <S.loginContainer>
+      <img src={imagemLogo}/>
+      <S.loginTitle>
+        BEM VINDO!  
+        </S.loginTitle>
+        <S.insiraSeusDados>
+          Por favor, insira seus dados.
+        </S.insiraSeusDados>       
+      
+      <S.insiraUser>
+        Email
+      </S.insiraUser> 
+      <S.Input
         type="text"
         value={formData.username}
         onChange={handleInput}
         name="username"
-        placeholder='Username'
+        placeholder='Entre com o seu email'
       />
-      <Input
+      <S.insiraPass>
+         Senha
+      </S.insiraPass>
+      <S.Input
         value={formData.password}
         onChange={handleInput}
         type="password"
         name="password"
-        placeholder='Password'
+        placeholder='**********'
       />
-      <Button type="submit" colorScheme='teal' size='md' onClick={handleSubmit}>
-        Login
-      </Button>
+      <S.loginButton type="submit" colorScheme='teal' size='md' onClick={handleSubmit}>
+        ENTRAR
+      </S.loginButton>
+      </S.loginContainer>
     </form>
   )
 }
