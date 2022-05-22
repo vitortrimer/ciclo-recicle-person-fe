@@ -6,7 +6,6 @@ const Home = () => {
   return(
     <S.HomeContainer>
       <S.MainContent>
-        Conteúdo
       </S.MainContent>
       <S.ProductsMenu>
         teste
