@@ -12,11 +12,11 @@ export const cadastroEmbalagemContainer =  styled.div`
         width: 45vw;
         object-fit: cover;
     }
-    img{
+    /* img{
          align-items: center;
          margin-top: 25px;
          margin-left: 15px;
-    }
+    } */
 `;
 
 export const cadastroEmbalagemTitle = styled.p `
@@ -50,7 +50,7 @@ export const fundoBrancoTipo = styled.div `
    padding: 13px 55px;
    gap: 22px;
    
-   font-family: 'IBM Plex Sans' !important;
+   font-family: 'IBM Plex Sans', sans-serif !important;
    font-style: normal;
    font-weight: 400;
    font-size: 20px;
@@ -79,4 +79,43 @@ export const pontuacaonButton = styled.button`
 export const instruction = styled.div `
 margin-left: center;
 
+`
+
+export const ImagePlaceholder = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: white;
+
+    img {
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        object-fit: scale-down;
+    }
+`
+
+export const InstructionItem = styled.div`
+    display: flex;
+    align-items: center;
+
+    margin-top: 14px;
+    padding-left: 8px;
+    :not(:last-child) {
+    }
+
+    :last-child {
+        margin-bottom: 14px;
+    }
+
+    span {
+        margin-left: 20px;
+        color: #338152;
+        font-family: 'Montserrat', sans-serif !important;
+    }
 `
