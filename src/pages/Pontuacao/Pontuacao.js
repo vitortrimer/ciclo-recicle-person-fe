@@ -23,18 +23,27 @@ const Pontuacao = () => {
         <S.cuponsDisponiveis>
         Segue os cupons disponíveis: 
         </S.cuponsDisponiveis>
-        <S.fundoBrancoPontuacoes>
-             {pontuations.map((pontuations, index) => (
-                <div key={index}>
-                    <img src={imgIconPorcentagem}/>  
-                    <span>pontuation</span>
-                </div>
+         <S.fundoBrancoPontuacoes>
+             {pontuations?.disposalPontuations?.map((pontuation, index) => (
+                <S.PontuationsItem key={index}>
+                    <imgItem src={imgIconPorcentagem}/>  
+                    <span>{pontuation?.pontuation}</span>
+                </S.PontuationsItem>
              ))
              }
-
          </S.fundoBrancoPontuacoes>
-
-
+         <S.cuponsDisponiveis>
+        Segue os cupons resgatados: 
+        </S.cuponsDisponiveis>
+         <S.fundoBrancoPontuacoes>
+             {pontuations?.disposalPontuations?.map((pontuation, index) => (
+                <S.PontuationsItem key={index}>
+                    <img src={imgIconPorcentagem}/>  
+                    <span>{pontuation?.pontuation}</span>
+                </S.PontuationsItem>
+             ))
+             }
+         </S.fundoBrancoPontuacoes>
         </S.pontuacaoContainer>
     )
 }

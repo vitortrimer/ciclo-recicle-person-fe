@@ -8,10 +8,8 @@ export const pontuacaoContainer =  styled.div`
     flex-direction: column;
     background-color : #F8F8F8;
 
+
     img{
-        display: flex;
-         align-items: center;
-         margin-top: 25px;
          margin-left: 15px;
     }
 `;
@@ -27,18 +25,26 @@ export const vejaSuaPontuacao = styled.p `
     line-height: 21px;
 `
 export const contagemEstrela = styled.div`
-    margin-top: 25px;    
-
-`
-export const cuponsDisponiveis = styled.p`
-
-    text-align: center;
+   text-align: center;
+   align-items: center;
+   display: flex;
     font-size: 16px;
     font-family: 'Montserrat'!important;
     font-style: normal;
     font-weight: 700;
     color: #202020;
-    line-height: 200%;
+
+    
+`
+export const cuponsDisponiveis = styled.p`
+
+    text-align: center;
+    font-size: 12px;
+    font-family: 'Montserrat'!important;
+    font-style: normal;
+    font-weight: 700;
+    color: #202020;
+    line-height: 24%;
    margin-top: 20px;
 `
 export const fundoBrancoPontuacoes = styled.div `
@@ -47,5 +53,29 @@ export const fundoBrancoPontuacoes = styled.div `
     width: 80vw;
     padding: 8px 16px;
     background-color: #FFFFFF;
+    
+`
+export const PontuationsItem = styled.div`
+    display: flex;
+    align-items: center;
+
+    margin-top: 14px;
+    padding-left: 8px;
+    :not(:last-child) {
+    }
+
+    :last-child {
+        margin-bottom: 14px;
+    }
+
+    span {
+        margin-left: 20px;
+        color: #338152;
+        font-family: 'Montserrat', sans-serif !important;
+    }
+     
+    img{
+         margin-top: 25px;
+    }
     
 `
