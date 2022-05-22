@@ -1,10 +1,10 @@
+/* eslint-disable no-undef */
 /* eslint-disable jsx-a11y/alt-text */
 import { useState } from 'react'
 import UserService from '../../services/User'
 import * as S from './Styles'
 import imagemLogo from '../../icon/imagemLogoPequena.png'
-
-
+import Register from '../Register/Register'
 
 const Login = () => {
   const service = new UserService()
@@ -37,7 +37,6 @@ const Login = () => {
       })
     );
   }
-
   return(
   
     <form onSubmit={handleSubmit}>
@@ -74,9 +73,11 @@ const Login = () => {
       <S.loginButton type="submit" colorScheme='teal' size='md' onClick={handleSubmit}>
         ENTRAR
       </S.loginButton>
+      <S.cadastrarButton onClick={() => {window.location.assign("/cadastro")}}>
+        CADASTRAR
+      </S.cadastrarButton>
       </S.loginContainer>
     </form>
   )
 }
-
 export default Login;
