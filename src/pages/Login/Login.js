@@ -42,7 +42,6 @@ const Login = () => {
   
     <form onSubmit={handleSubmit}>
      
-
       <S.loginContainer>
       <img src={imagemLogo}/>
       <S.loginTitle>
