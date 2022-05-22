@@ -55,7 +55,7 @@ export const fundoBrancoTipo = styled.div `
    font-weight: 400;
    font-size: 20px;
    line-height: 26px;
-   color: #FFCB47;
+   color: ${props => props.color || "#000"};
 `
 export const fundoBrancoInstrucoes = styled.div `
     margin-top: 14px;
@@ -106,7 +106,11 @@ export const InstructionItem = styled.div`
 
     margin-top: 14px;
     padding-left: 8px;
-    :not(:last-child) {
+    
+    img {
+        width: 26px;
+        height: 26px;
+        object-fit: cover;
     }
 
     :last-child {
