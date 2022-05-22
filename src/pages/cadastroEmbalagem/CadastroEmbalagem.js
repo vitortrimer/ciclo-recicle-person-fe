@@ -2,33 +2,44 @@
 import * as S from './Styles'
 import imagemFundoBrancoEmbalagem from '../../icon/CirculoFundoImagemProduto.png'
 import imgIcon from '../../icon/interro.png'
-const CadastroEmbalagem = () => {
+import { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
+import Product from '../../services/Product'
 
-    const instructions = [
-        "instrucao 1",
-        "instrucao 2",
-        "instrucao 3",
-        "instrucao 4",
-    ]
+const CadastroEmbalagem = () => {
+  const [product, setProduct] = useState({});
+  const { id } = useParams();
+
+  useEffect(() => {
+    const service = new Product()
+    service.getProduct(id).then(result => {
+      if(result?.data) {
+        console.log(result.data)
+        setProduct(result.data)
+      }
+    })
+  }, [])
 
     return(
     <S.cadastroEmbalagemContainer>
          <S.cadastroEmbalagemTitle>
-            Descarte correto da embalagem
+            {product.name}
          </S.cadastroEmbalagemTitle>
-         <img src={imagemFundoBrancoEmbalagem}/>
+         <S.ImagePlaceholder>
+           <img src={product.image} alt="Imagem do produto" />
+         </S.ImagePlaceholder>
          <S.fundoBrancoTipo>
-           Tipo
+            {product.type}
          </S.fundoBrancoTipo>
          <S.instrucaoDescarte>
            Instruções de descarte
          </S.instrucaoDescarte>
          <S.fundoBrancoInstrucoes>
-             {instructions.map((instruction, index) => (
-                <div key={index}>
+             {product?.disposalInstructions?.map((instruction, index) => (
+                <S.InstructionItem key={index}>
                     <img src={imgIcon}/>  
-                    <span>instruction</span>
-                </div>
+                    <span>{instruction?.instruction}</span>
+                </S.InstructionItem>
              ))
              }
          </S.fundoBrancoInstrucoes>
