@@ -13,6 +13,6 @@ export const MainContent = styled.div`
 `
 
 export const ProductsMenu = styled.div`
-  width: 30vw;
+  width: 300vw;
   background-color: red;
 `

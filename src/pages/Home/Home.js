@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import Form from '../../components/Form/Form';
 import * as S from './Styles'
 
 const Home = () => {
@@ -6,7 +7,9 @@ const Home = () => {
   return(
     <S.HomeContainer>
       <S.MainContent>
-        Conteúdo
+        <Form 
+          username=""
+        />
       </S.MainContent>
       <S.ProductsMenu>
         teste
